@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/reactrepo">
         <Routes>
           <Route path= "/" element={<Layout/>}>
             <Route index element={<Home/>}></Route>
