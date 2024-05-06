@@ -1,0 +1,30 @@
+{
+    "education": [
+        {
+            "name": "Chas Academy",
+            "description": "Fullstack Developer .NET",
+            "years": "2023-2025"
+        }
+    ],
+
+    "work": [
+        {
+            "name": "Folkpool",
+            "title":"Sales",
+            "description": "Experience in specialized sales, particularly in pools and hot tubs, gained within a dynamic retail setting. My role involved overseeing entire pool projects, from initial planning to successful completion, showcasing my adept project management skills. Additionally, I managed daily store operations, including operating cash registers and maintaining inventory levels to ensure seamless store management. Alongside these responsibilities, I upheld a high standard of store cleanliness while consistently delivering exceptional customer service.",
+            "years": "Nov 2020 - Present"
+        },
+        {
+            "name": "TC Företagen",
+            "title":"Sales",
+            "description": "Held a position of Sales Representative for decorative items and signage, managing the full sales cycle.",
+            "years": "Apr 2018 - Jun 2020"
+        },
+        {
+            "name": "Södertälje SK",
+            "title":"Marketing coordinator",
+            "description": "Managed marketing, event planning, and sales",
+            "years": "2017-2018"
+        }
+    ]
+}

@@ -1,0 +1,427 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+
+}
+
+section{
+  padding: 100px;
+  min-height: 100vh;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.banner .imgOnSide{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+}
+
+.banner .imgOnSide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;   
+  object-fit: cover;
+}
+
+.banner .contentBox, .sidebar{
+  position: absolute;
+  top: 0;
+  right: 0;    
+  width: calc(100% - 500px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:100px;
+}
+
+.logo{
+  position: absolute;
+  top: 30px;
+  left: 70px;
+  width: 60px;
+  border-radius: 50px;
+  padding: 0.5px;
+}
+
+.banner .contentBox h4{
+  font-size: 1.5em;
+  color: #333;
+  font-weight: 300;
+}
+
+.banner .contentBox h4 span {
+  color: #ce506b;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.banner .contentBox h2{
+  font-size: 3em;
+  color: #333;
+  line-height: 1em;
+}
+
+p{
+  font-size: 1.1em; 
+  margin: 20px 0;  
+  font-weight: 300;
+}
+
+.btn {
+  background:#ce506b;
+  color: white;
+  padding: 10px 30px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.sidebar {
+  position: fixed;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  padding: 40px;
+  z-index: 100;
+  right:-100%;
+}
+
+.sidebar.active{
+  right: 0;
+}
+
+
+.sidebar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  margin: 10px 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sidebar ul li a:hover {
+  color: #ce506b;
+}
+
+.sci {
+  position: absolute;
+  left: 100px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sci li {
+  margin-right: 1px;
+  list-style: none;
+}
+
+.sci li img {
+  height: 50px;
+  transform: scale(0.5);
+  opacity: 0.7;
+}
+
+.sci li img:hover {
+  transform: scale(1);
+}
+
+.title{
+  width: 100%;
+  text-align: center;
+}
+
+.title.white h2,
+.title.white p {
+  color: white;
+}
+
+
+.title h2 {
+  position: relative;
+  color: #ce506b;
+  font-size: 1.8em;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.title p{
+  max-width: 700px;
+  display: inline-block;
+}
+
+.title h2::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background: #000;
+}
+
+.title.white h2::before{
+  background: #ce506b;
+}
+
+.About {
+  background-color: #000;
+}
+
+.About .content{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+
+}
+
+.About .content .textbox{
+  min-width: 49%;
+  width: 49%;
+}
+
+.About .content .textbox p{
+  color: white;
+}
+
+.About .content .imgbox{
+  margin-left: 40px;
+  cursor: pointer;
+
+}
+
+.About .content .imgbox img{
+  max-width: 100%;
+}
+
+.portfolio .content{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.portfolio .content .portfoliobx{
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.portfolio .content .portfoliobx .imgbx,
+.portfolio .content .portfoliobx .textbx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.portfolio .content .portfoliobx .imgbx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio .content .portfoliobx .textbx{
+  background: #000;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.portfolio .content .portfoliobx:hover .textbx{
+  opacity: 1;
+}
+
+.portfolio .content .portfoliobx .textbx h3{
+  color: #ce506b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.contact {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .contactForm{
+  position: relative;
+  width: 700px;
+  margin-top: 20px;
+}
+
+.contact .contactForm .row{
+  width: 100%;
+  display: flex;
+}
+
+.contact .contactForm .row .col50{
+  width: 50%;
+  margin: 10px;
+}
+
+.contact .contactForm .row .col100{
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+
+}
+
+.contact .contactForm .row input,
+.contact .contactForm .row textarea{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background:#111;
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+} 
+
+.contact .contactForm .row textarea{
+  height: 100px;
+}
+
+.contact .contactForm .row input[type="submit"]{
+  background: #ce506b;
+  color: #fff;
+  padding: 10px 30px;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+  max-width: 150px;
+}
+
+.copyright {
+  color: #fff;
+  background: #111;
+  text-align: center;
+  padding: 10px;
+}
+
+.copyright p{
+  margin: 0;
+  font-size: 16px;
+}
+
+.llamaModal{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-content{
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+
+}
+
+.close {
+  position: absolute;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+} 
+
+
+@media(max-width: 991px){
+ .imgOnSide{
+  display: none;
+ }
+ .banner .contentBox{
+  width: 100%;
+ }
+ .sidebar{
+  width: 100%;
+ }
+ .banner .contentBox .sidebar{
+  width: 100%;
+  padding: 40px;
+ }
+ .logo{
+  display: none;
+ }
+ .toggle {
+  right: 40px;
+ }
+ .sci{
+  display: none;
+ }
+
+ .imgbox{
+  display: none;
+ }
+
+ .About .content .textbox {
+  min-width: 100%;
+  width: 100%;
+ }
+
+ .portfolio .content .portfoliobx {
+  width: 150px;
+  height: 150px;
+ }
+
+ .contact .contactForm {
+  width: 300px;
+ }
+}
